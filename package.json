@@ -1,10 +1,11 @@
 {
   "name": "project-lvl1-vi",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "question based quiz game",
   "main": "index.js",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "files": [
     "dist"
