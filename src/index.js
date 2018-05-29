@@ -14,8 +14,6 @@ const isEven = num => num % 2 === 0;
 
 const randomNum = (min, max) => Math.floor(Math.random() * ((max - min) + 1)) + min;
 const brainEvenGame = () => {
-  console.log('Welcome to the Brain Games!');
-  console.log('Answer "yes" if number even otherwise answer "no".');
   const userName = greetingUser();
   const numOfRightAnswers = 3;
   let counter = 0;
@@ -32,7 +30,7 @@ const brainEvenGame = () => {
       break;
     }
   }
-  if (numOfRightAnswers === 3) {
+  if (counter === numOfRightAnswers) {
     console.log(`Congratulations, ${userName}!`);
   }
 };
