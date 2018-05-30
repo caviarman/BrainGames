@@ -1,6 +1,6 @@
 {
   "name": "project-lvl1-vi",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "question based quiz game",
   "main": "index.js",
   "bin": {
