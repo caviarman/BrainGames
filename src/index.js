@@ -27,4 +27,65 @@ const startEvenGame = () => {
     console.log(`Congratulations, ${userName}!`);
   }
 };
-export default startEvenGame;
+const startCalculatorGame = () => {
+  console.log('Welcome to the Brain Games!');
+  console.log('What is the result of the expression?');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
+  let userAnswer;
+  let rightAnswer;
+  for (let i = 0; i < ATTEMPT; i += 1) {
+    const num1 = getRandomNum(1, 10);
+    const num2 = getRandomNum(1, 10);
+    const operator = getRandomNum(1, 3);
+    switch (operator) {
+      case 1:
+        userAnswer = readlineSync.question(`Question: ${num1} + ${num2}\n`);
+        rightAnswer = num1 + num2;
+        break;
+      case 2:
+        userAnswer = readlineSync.question(`Question: ${num1} - ${num2}\n`);
+        rightAnswer = num1 - num2;
+        break;
+      case 3:
+        userAnswer = readlineSync.question(`Question: ${num1} * ${num2}\n`);
+        rightAnswer = num1 * num2;
+        break;
+      default:
+        break;
+    }
+    console.log(`Your answer: ${userAnswer}`);
+    if (Number(userAnswer) === rightAnswer) {
+      console.log('Correct!');
+    } else {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
+      console.log(`Let's try again, ${userName}`);
+      isUserWin = false;
+      break;
+    }
+  }
+  if (isUserWin) {
+    console.log(`Congratulations, ${userName}!`);
+  }
+};
+const startMenu = () => {
+  let flag = true;
+  while (flag) {
+    console.log('Choose the game by number:');
+    const gameNum = readlineSync.question('1. Brain-Even\n2. Brain-Calculator\n3. Exit\n');
+    switch (gameNum) {
+      case '1':
+        startEvenGame();
+        break;
+      case '2':
+        startCalculatorGame();
+        break;
+      case '3':
+        flag = false;
+        break;
+      default:
+        break;
+    }
+  }
+};
+export { startMenu, startEvenGame, startCalculatorGame };
