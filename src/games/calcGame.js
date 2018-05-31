@@ -7,7 +7,7 @@ const multi = (num1, num2) => num1 * num2;
 const operator = ['+', '-', '*'];
 const action = [sum, minus, multi];
 const task = 'What is the result of the expression?';
-const logicOfCalculatorGame = () => {
+const game = () => {
   const num1 = getRandomNum(1, 10);
   const num2 = getRandomNum(1, 10);
   const index = getRandomNum(0, 2);
@@ -15,4 +15,4 @@ const logicOfCalculatorGame = () => {
   const rightAnswer = action[index](num1, num2);
   return { question, rightAnswer };
 };
-export default () => gameEngine(logicOfCalculatorGame, task);
+export default () => gameEngine(game, task);
