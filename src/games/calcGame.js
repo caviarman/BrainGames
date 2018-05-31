@@ -12,7 +12,7 @@ const gameCalc = () => {
   const num2 = getRandomNum(1, 10);
   const index = getRandomNum(0, 2);
   const question = `${num1} ${operator[index]} ${num2}`;
-  const rightAnswer = action[index](num1, num2);
+  const rightAnswer = String(action[index](num1, num2));
   return { question, rightAnswer };
 };
 export default () => gameEngine(gameCalc, task);

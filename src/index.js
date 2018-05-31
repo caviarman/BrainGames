@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
-import { attempt } from '../src/utils';
 
+const attempt = 3;
 export default (gameLogic, task) => {
   console.log('Welcome to the Brain Games!');
   console.log(task);

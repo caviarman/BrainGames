@@ -1,6 +1,7 @@
 import gameEngine from '..';
-import { getRandomNum, isEven } from '../utils';
+import getRandomNum from '../utils';
 
+const isEven = number => number % 2 === 0;
 const task = 'Answer "yes" if number even otherwise answer "no".';
 const gameEven = () => {
   const question = getRandomNum(3, 301);
