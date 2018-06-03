@@ -3,10 +3,11 @@ import getRandomNum from '../utils';
 
 const task = 'Is this number prime?';
 const isPrime = (number) => {
-  const iter = (item, acc) => {
-    if (acc === item) return true;
+  if (number < 2) return false;
+  const iter = (acc) => {
+    if (acc === number / 2) return true;
     if (number % acc === 0) return false;
-    return iter(item, acc + 1);
+    return iter(acc + 1);
   };
   return iter(number, 2);
 };
