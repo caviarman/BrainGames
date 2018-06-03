@@ -5,11 +5,11 @@ const task = 'Is this number prime?';
 const isPrime = (number) => {
   if (number < 2) return false;
   const iter = (acc) => {
-    if (acc === number / 2) return true;
+    if (acc > number / 2) return true;
     if (number % acc === 0) return false;
     return iter(acc + 1);
   };
-  return iter(number, 2);
+  return iter(2);
 };
 const gamePrime = () => {
   const question = getRandomNum(2, 100);
