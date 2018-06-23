@@ -1,5 +1,5 @@
 {
-  "name": "project-lvl1-vi",
+  "name": "brain-games-hexlet",
   "version": "1.5.3",
   "description": "question based quiz game",
   "main": "index.js",
@@ -10,7 +10,8 @@
     "brain-gcd": "dist/bin/brain-gcd.js",
     "brain-balance": "dist/bin/brain-balance.js",
     "brain-progression": "dist/bin/brain-progression.js",
-    "brain-prime": "dist/bin/brain-prime.js"
+    "brain-prime": "dist/bin/brain-prime.js",
+    "test": "dist/bin/test.js"
   },
   "files": [
     "dist"
@@ -44,6 +45,7 @@
     "eslint-plugin-import": "^2.12.0"
   },
   "dependencies": {
+    "lodash": "^4.17.10",
     "readline-sync": "^1.4.9"
   }
 }
